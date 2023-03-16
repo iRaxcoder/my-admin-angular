@@ -12,7 +12,17 @@
           <div
             class="progress-bar bg-primary progress-bar-striped active"
             style="height: 10px"
-            [style.width]="getProgressPercent"
+            [style.width]="getProgress1"
+            role="progressbar"
+          >
+            <span class="sr-only">85% Complete (success)</span>
+          </div>
+        </div>
+        <div class="progress m-t-20">
+          <div
+            class="progress-bar bg-primary progress-bar-striped active"
+            style="height: 10px"
+            [style.width]="getProgress2"
             role="progressbar"
           >
             <span class="sr-only">85% Complete (success)</span>
@@ -27,38 +37,22 @@
   <div class="col-6">
     <div class="card">
       <div class="card-body">
-        <div class="input-group">
-          <span class="input-group-btn">
-            <button
-              class="btn btn-primary"
-              type="button"
-              (click)="updateProgressPercent(-5)"
-            >
-              <i class="fa fa-minus"></i>
-            </button>
-          </span>
-          <input
-            type="number"
-            class="form-control"
-            placeholder="Progress"
-            [(ngModel)]="progress"
-          />
-          <span class="input-group-btn">
-            <button
-              class="btn btn-primary"
-              type="button"
-              (click)="updateProgressPercent(+5)"
-            >
-              <i class="fa fa-plus"></i>
-            </button>
-          </span>
-        </div>
+        <app-counter
+          (value)="progress1 = $event"
+          [value]="progress1"
+          [btnClass]="'btn btn-info'"
+        ></app-counter>
       </div>
     </div>
   </div>
   <div class="col-6">
     <div class="card">
-      <div class="card-body">2</div>
+      <div class="card-body">
+        <app-counter
+          (value)="progress2 = $event"
+          [value]="progress2"
+        ></app-counter>
+      </div>
     </div>
   </div>
 </div>
