@@ -9,6 +9,8 @@ import { SharedModule } from '../shared/shared.module';
 import { AppRoutingModule } from '../app-routing.module';
 import { ComponentsModule } from '../components/components.module';
 import { AccountSettingsComponent } from './account-settings/account-settings.component';
+import { PromisesComponent } from './promises/promises.component';
+import { RxjsComponent } from './rxjs/rxjs.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +19,8 @@ import { AccountSettingsComponent } from './account-settings/account-settings.co
     Graphic1Component,
     AccountSettingsComponent,
     PagesComponent,
+    PromisesComponent,
+    RxjsComponent,
   ],
   imports: [
     CommonModule,
@@ -26,11 +30,7 @@ import { AccountSettingsComponent } from './account-settings/account-settings.co
     ComponentsModule,
   ],
   exports: [
-    DashboardComponent,
-    ProgressComponent,
-    Graphic1Component,
-    PagesComponent,
-    AccountSettingsComponent,
+    //if you need other components to use this components
   ],
 })
 export class PagesModule {}

@@ -10,6 +10,7 @@ const routes: Routes = [
   path: /auth = AuthRoutingModule
   etc
  */
+
   { path: '**', component: NotfoundComponent },
 ];
 

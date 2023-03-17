@@ -1,10 +1,3 @@
-/*
-Template Name: Admin Pro Admin
-Author: Wrappixel
-Email: niravjoshi87@gmail.com
-File: js
-*/
-
 const customInitFunctions = () => {
   $(function () {
     "use strict";
@@ -16,7 +9,7 @@ const customInitFunctions = () => {
     });
     // ==============================================================
     // This is for the top header part and sidebar part
-    // ==============================================================
+    // =================== ===========================================
     var set = function () {
       var width = window.innerWidth > 0 ? window.innerWidth : this.screen.width;
       var topOffset = 0;
@@ -86,26 +79,6 @@ const customInitFunctions = () => {
       })
       .trigger("blur");
 
-    // ==============================================================
-    // Auto select left navbar
-    // ==============================================================
-    $(function () {
-      var url = window.location;
-      var element = $("ul#sidebarnav a")
-        .filter(function () {
-          return this.href == url;
-        })
-        .addClass("active")
-        .parent()
-        .addClass("active");
-      while (true) {
-        if (element.is("li")) {
-          element = element.parent().addClass("in").parent().addClass("active");
-        } else {
-          break;
-        }
-      }
-    });
     // ==============================================================
     //tooltip
     // ==============================================================
